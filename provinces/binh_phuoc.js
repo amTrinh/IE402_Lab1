@@ -1,8 +1,8 @@
 const binh_phuoc = {
 	title: 'Tỉnh Bình Phước',
-	population: '994.679',
-	area: '6.881 km²',
-	color: [43, 181, 203, 0.8],
+	population: '1.034.667',//Hết năm 2022
+	area: '6.877 km²',
+	color: [44, 181, 203, 0.8],
 	rings: [
 		[106.411855, 11.973559],
 		[106.465154, 11.872284],

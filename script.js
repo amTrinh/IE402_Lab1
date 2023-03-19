@@ -35,24 +35,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 			geometry: { type: 'point', ...data },
 		});
 	};
-	// const withMuseum = (data) => {
-	// 	return new Graphic({
-	// 		symbol: { type: 'picture-marker', url: museumImg, width: '48px', height: '48px' },
-	// 		geometry: { type: 'point', ...data },
-	// 	});
-	// };
-	// const widthPark = (data) => {
-	// 	return new Graphic({
-	// 		symbol: { type: 'picture-marker', url: parkImg, width: '48px', height: '48px' },
-	// 		geometry: { type: 'point', ...data },
-	// 	});
-	// };
-	// const widthBridge = (data) => {
-	// 	return new Graphic({
-	// 		symbol: { type: 'picture-marker', url: bridgeImg, width: '48px', height: '48px' },
-	// 		geometry: { type: 'point', ...data },
-	// 	});
-	// };
+
 	const withWay = (data) => {
 		return new Graphic({
 			symbol: { type: 'simple-line', color: data.color, width: 3 },
@@ -103,6 +86,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withCity(bac_lieu_city));
 	graphicsLayer.add(withCity(vi_thanh_city));
 	graphicsLayer.add(withCity(nga_bay_city));
+	graphicsLayer.add(withCity(dong_xoai_city));
 	graphicsLayer.add(withCity(can_tho_city));
 	graphicsLayer.add(withCity(long_xuyen_city));
 	graphicsLayer.add(withCity(chau_doc_city));
@@ -128,41 +112,6 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(tra_vinh_university));
 	graphicsLayer.add(withUniversity(utc));
 
-	// // bảo tàng
-	// graphicsLayer.add(withMuseum(ho_chi_minh_m));
-	// graphicsLayer.add(withMuseum(ton_duc_thang_m));
-	// graphicsLayer.add(withMuseum(ca_mau_m));
-	// graphicsLayer.add(withMuseum(kien_giang_m));
-	// graphicsLayer.add(withMuseum(binh_duong_m));
-	// graphicsLayer.add(withMuseum(binh_phuoc_m));
-	// graphicsLayer.add(withMuseum(ben_tre_m));
-	// graphicsLayer.add(withMuseum(dong_nai_m));
-	// graphicsLayer.add(withMuseum(tay_ninh_m));
-	// graphicsLayer.add(withMuseum(tien_giang_m));
-
-	// // công viên
-	// graphicsLayer.add(widthPark(tao_dan_p));
-	// graphicsLayer.add(widthPark(gia_dinh_p));
-	// graphicsLayer.add(widthPark(ca_mau_p));
-	// graphicsLayer.add(widthPark(bac_lieu_p));
-	// graphicsLayer.add(widthPark(lai_thieu_p));
-	// graphicsLayer.add(widthPark(nguyen_van_tri_p));
-	// graphicsLayer.add(widthPark(my_thanh_an_p));
-	// graphicsLayer.add(widthPark(sa_dec_p));
-	// graphicsLayer.add(widthPark(tam_hiep_p));
-	// graphicsLayer.add(widthPark(the_gioi_tuoi_tho_p));
-
-	// // cầu
-	// graphicsLayer.add(widthBridge(binh_loi_b));
-	// graphicsLayer.add(widthBridge(buu_hoa_b));
-	// graphicsLayer.add(widthBridge(ca_mau_b));
-	// graphicsLayer.add(widthBridge(cao_lanh_b));
-	// graphicsLayer.add(widthBridge(dong_nai_b));
-	// graphicsLayer.add(widthBridge(kien_giang_b));
-	// graphicsLayer.add(widthBridge(long_binh_b));
-	// graphicsLayer.add(widthBridge(sai_gon_b));
-	// graphicsLayer.add(widthBridge(tan_an_b));
-	// graphicsLayer.add(widthBridge(du_tho_b));
 
 	// đường
 	graphicsLayer.add(withWay(ql61));
@@ -175,6 +124,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql54));
 	graphicsLayer.add(withWay(ql60));
 	graphicsLayer.add(withWay(ql61b));
+	// graphicsLayer.add(withWay(ql13));
+	// graphicsLayer.add(withWay(ql14));
 
 	map.add(graphicsLayer);
 });
