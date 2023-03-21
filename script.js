@@ -124,8 +124,10 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql54));
 	graphicsLayer.add(withWay(ql60));
 	graphicsLayer.add(withWay(ql61b));
-	// graphicsLayer.add(withWay(ql13));
-	// graphicsLayer.add(withWay(ql14));
+	graphicsLayer.add(withWay(ql13));
+	graphicsLayer.add(withWay(ql14));
+	graphicsLayer.add(withWay(ql22));
+	graphicsLayer.add(withWay(ql22B));
 
 	map.add(graphicsLayer);
 });
