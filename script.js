@@ -11,10 +11,46 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const view = new MapView({
 		container: 'viewDiv',
 		map: map,
-		zoom: 8,
-		// center: [15, 65] // longitude, latitude
-		center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
+		zoom: 11,
+		center: [106.0515747, 10.6690774], // longitude, latitude
+		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
+
+	// Get location
+	const getLocation = () => {
+		view.on("click", (event) => {
+			// Get the coordinates of the click on the view
+			const lat = Math.round(event.mapPoint.latitude * 10000000) / 10000000;
+			const lon = Math.round(event.mapPoint.longitude * 10000000) / 10000000;
+	
+			view.popup.open({
+			// Set the popup's title to the coordinates of the location
+				title: "Reverse geocode: [" + lon + ", " + lat + "],",
+				location: event.mapPoint // Set the location of the popup to the clicked location
+			});
+	
+			const params = {
+				location: event.mapPoint
+			};
+	
+			// Display the popup
+			// Execute a reverse geocode using the clicked location
+			locator
+			.locationToAddress(locatorUrl, params)
+			.then((response) => {
+				// If an address is successfully found, show it in the popup's content
+				view.popup.content = response.address;
+			})
+			.catch(() => {
+				// If the promise fails and no result is found, show a generic message
+				view.popup.content = "No address was found for this location";
+			});
+		});
+	}
+
+	// getLocation();
+
+
 	const graphicsLayer = new GraphicsLayer();
 
 	const withProvince = (data) => {
@@ -32,7 +68,12 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const withUniversity = (data) => {
 		return new Graphic({
 			symbol: { type: 'picture-marker', url: universityImg, width: '48px', height: '48px' },
-			geometry: { type: 'point', ...data },
+			geometry: { type: 'point', ...data } ,
+			attributes: data,
+		  	popupTemplate: {
+			title: "{title}",
+			content: '<p>Địa chỉ: {address}</p>',
+		  },
 		});
 	};
 
@@ -105,7 +146,10 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(ftu));
 	graphicsLayer.add(withUniversity(kien_giang_university));
 	graphicsLayer.add(withUniversity(bac_lieu_university));
+	graphicsLayer.add(withUniversity(kinh_te_cong_nghiep_long_an_university));
+	graphicsLayer.add(withUniversity(tan_tao_long_an_university));
 	graphicsLayer.add(withUniversity(binh_duong_university));
+	graphicsLayer.add(withUniversity(dong_thap_university));
 	graphicsLayer.add(withUniversity(hcmut));
 	graphicsLayer.add(withUniversity(an_giang_university));
 	graphicsLayer.add(withUniversity(can_tho_university));
@@ -125,6 +169,17 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ah1));
 	graphicsLayer.add(withWay(tl748));
 	graphicsLayer.add(withWay(ql53));
+	graphicsLayer.add(withWay(ql30_dong_thap));
+	graphicsLayer.add(withWay(ql54_dong_thap));
+	graphicsLayer.add(withWay(ql80_dong_thap));
+	graphicsLayer.add(withWay(qlN2_dong_thap));
+	graphicsLayer.add(withWay(qlN2B_dong_thap));
+	graphicsLayer.add(withWay(ql1A_long_an_d1));
+	graphicsLayer.add(withWay(ql1A_long_an_d2));
+	graphicsLayer.add(withWay(ql50_long_an));
+	graphicsLayer.add(withWay(ql62_long_an));
+	graphicsLayer.add(withWay(qlN1_long_an));
+	graphicsLayer.add(withWay(qlN2_long_an));
 	graphicsLayer.add(withWay(ql54));
 	graphicsLayer.add(withWay(ql60));
 	graphicsLayer.add(withWay(ql61b));
