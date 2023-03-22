@@ -114,6 +114,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	//trường đại học TPHCM
 	graphicsLayer.add(withUniversity(nguyentatthanh));
 	graphicsLayer.add(withUniversity(tonducthang)); 
+	graphicsLayer.add(withUniversity(mo)); 
+	graphicsLayer.add(withUniversity(fpt)); 
 
 	// đường
 	graphicsLayer.add(withWay(ql61));
