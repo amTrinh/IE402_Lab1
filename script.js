@@ -133,6 +133,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql22));
 	graphicsLayer.add(withWay(ql22B));
 	graphicsLayer.add(withWay(ql50));
+	graphicsLayer.add(withWay(ah17));
+	graphicsLayer.add(withWay(ql55));
 
 	map.add(graphicsLayer);
 });
