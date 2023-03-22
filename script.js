@@ -111,7 +111,9 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(can_tho_university));
 	graphicsLayer.add(withUniversity(tra_vinh_university));
 	graphicsLayer.add(withUniversity(utc));
-
+	//trường đại học TPHCM
+	graphicsLayer.add(withUniversity(nguyentatthanh));
+	graphicsLayer.add(withUniversity(tonducthang)); 
 
 	// đường
 	graphicsLayer.add(withWay(ql61));
@@ -128,6 +130,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql14));
 	graphicsLayer.add(withWay(ql22));
 	graphicsLayer.add(withWay(ql22B));
+	graphicsLayer.add(withWay(ql50));
 
 	map.add(graphicsLayer);
 });
