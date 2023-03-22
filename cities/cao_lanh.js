@@ -1,5 +1,5 @@
 const cao_lanh_city = {
   title: "Thành phố Cao Lãnh",
-  longitude: 105.61951106366315,
-  latitude: 10.469828322989988,
+  longitude: 105.63402177524243,
+  latitude: 10.45559377036462,
 };

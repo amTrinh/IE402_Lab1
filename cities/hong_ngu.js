@@ -1,5 +1,5 @@
 const hong_ngu_city = {
   title: "Thành phố Hồng Ngự",
-  longitude: 105.38651047371036,
-  latitude: 10.82481631721435,
+  longitude: 105.34324801526934,
+  latitude: 10.811410049771856,
 };

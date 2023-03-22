@@ -1,5 +1,5 @@
 const sa_dec_city = {
   title: "Thành phố Sa Đéc",
-  longitude: 105.74196045036228,
-  latitude: 10.313738925552077,
+  longitude: 105.74627865293655,
+  latitude: 10.314417203533457,
 };
