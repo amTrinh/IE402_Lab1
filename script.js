@@ -12,7 +12,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		container: 'viewDiv',
 		map: map,
 		zoom: 11,
-		center: [106.0515747, 10.6690774], // longitude, latitude
+		center:  [107.1697763, 10.9821381], // longitude, latitude
 		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
@@ -20,8 +20,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const getLocation = () => {
 		view.on("click", (event) => {
 			// Get the coordinates of the click on the view
-			const lat = Math.round(event.mapPoint.latitude * 10000000) / 10000000;
-			const lon = Math.round(event.mapPoint.longitude * 10000000) / 10000000;
+			const lat = Math.round(event.mapPoint.latitude * 100000000000000) / 100000000000000;
+			const lon = Math.round(event.mapPoint.longitude * 100000000000000) / 100000000000000;
 	
 			view.popup.open({
 			// Set the popup's title to the coordinates of the location
@@ -48,7 +48,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		});
 	}
 
-	// getLocation();
+	getLocation();
 
 
 	const graphicsLayer = new GraphicsLayer();
@@ -125,6 +125,12 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	//city
 	graphicsLayer.add(withCity(rach_gia_city));
 	graphicsLayer.add(withCity(bac_lieu_city));
+	graphicsLayer.add(withCity(thu_dau_mot_binh_duong_city));
+	graphicsLayer.add(withCity(di_an_binh_duong_city));
+	graphicsLayer.add(withCity(thuan_an_binh_duong_city));
+	graphicsLayer.add(withCity(tan_uyen_binh_duong_city));
+	graphicsLayer.add(withCity(bien_hoa_dong_nai_city));
+	graphicsLayer.add(withCity(long_khanh_dong_nai_city));
 	graphicsLayer.add(withCity(vi_thanh_city));
 	graphicsLayer.add(withCity(nga_bay_city));
 	graphicsLayer.add(withCity(dong_xoai_city));
@@ -149,6 +155,17 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(kinh_te_cong_nghiep_long_an_university));
 	graphicsLayer.add(withUniversity(tan_tao_long_an_university));
 	graphicsLayer.add(withUniversity(binh_duong_university));
+	graphicsLayer.add(withUniversity(kinh_te_ky_thuat_binh_duong_university));
+	graphicsLayer.add(withUniversity(quoc_te_mien_dong_university));
+	graphicsLayer.add(withUniversity(thu_dau_mot_university));
+	graphicsLayer.add(withUniversity(viet_duc_university));
+	graphicsLayer.add(withUniversity(ngo_quyen_university));
+	graphicsLayer.add(withUniversity(cong_nghe_dong_nai_university));
+	graphicsLayer.add(withUniversity(lac_hong_university));
+	graphicsLayer.add(withUniversity(cong_nghe_mien_dong_university));
+	graphicsLayer.add(withUniversity(dong_nai_university));
+	graphicsLayer.add(withUniversity(nguyen_hue_university));
+	graphicsLayer.add(withUniversity(lam_nghiep_cs2_university));
 	graphicsLayer.add(withUniversity(dong_thap_university));
 	graphicsLayer.add(withUniversity(hcmut));
 	graphicsLayer.add(withUniversity(an_giang_university));
