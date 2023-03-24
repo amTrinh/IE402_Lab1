@@ -177,7 +177,9 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(tonducthang)); 
 	graphicsLayer.add(withUniversity(mo)); 
 	graphicsLayer.add(withUniversity(fpt)); 
-
+	//trường đại học cà mau
+	graphicsLayer.add(withUniversity(binh_duong_ca_mau_uniersity));
+	graphicsLayer.add(withUniversity(ton_duc_thang_ca_mau_uniersity));
 	// đường
 	graphicsLayer.add(withWay(ql61));
 	graphicsLayer.add(withWay(quan_lo_phung_hiep));
@@ -207,6 +209,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql50));
 	graphicsLayer.add(withWay(ah17));
 	graphicsLayer.add(withWay(ql55));
+	graphicsLayer.add(withWay(ql1A_ca_mau));
 
 	map.add(graphicsLayer);
 });
