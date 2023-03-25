@@ -12,12 +12,49 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		container: 'viewDiv',
 		map: map,
 		zoom: 10,
-		center:  [105.21452156067664, 10.47320379432781], // longitude, latitude
+		center:  [106.30781892876573, 10.41970833923412], // longitude, latitude
 		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
+	function saveTextToClipboard(text) {
+		const textarea = document.createElement('textarea');
+		textarea.value = text;
+		document.body.appendChild(textarea);
+		textarea.select();
+		document.execCommand('copy');
+		document.body.removeChild(textarea);
+
+		// create a toast notification element
+		const toast = document.createElement('div');
+		toast.textContent = 'Text copied to clipboard!';
+		toast.style.position = 'fixed';
+		toast.style.bottom = '20px';
+		toast.style.left = '50%';
+		toast.style.transform = 'translateX(-50%)';
+		toast.style.padding = '10px 20px';
+		toast.style.backgroundColor = '#333';
+		toast.style.color = '#fff';
+		toast.style.borderRadius = '5px';
+		toast.style.opacity = '0';
+		toast.style.transition = 'opacity 0.3s ease-in-out';
+
+		// add the toast element to the document
+		document.body.appendChild(toast);
+
+		// animate the toast by changing its opacity
+		setTimeout(() => {
+			toast.style.opacity = '1';
+		}, 100);
+		setTimeout(() => {
+			toast.style.opacity = '0';
+		}, 2000);
+		setTimeout(() => {
+			document.body.removeChild(toast);
+		}, 2300);
+	}
+
 	// Get location
-	const getLocation = () => {
+	let getLocation = () => {
 		view.on("click", (event) => {
 			// Get the coordinates of the click on the view
 			const lat = Math.round(event.mapPoint.latitude * 100000000000000) / 100000000000000;
@@ -29,6 +66,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 				location: event.mapPoint // Set the location of the popup to the clicked location
 			});
 	
+			saveTextToClipboard("[" + lon + ", " + lat + "],");
+
 			const params = {
 				location: event.mapPoint
 			};
@@ -67,7 +106,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 
 	const withUniversity = (data) => {
 		return new Graphic({
-			symbol: { type: 'picture-marker', url: universityImg, width: '48px', height: '48px' },
+			symbol: { type: 'picture-marker', url: universityImg, width: '24px', height: '24px' },
 			geometry: { type: 'point', ...data } ,
 			attributes: data,
 		  	popupTemplate: {
@@ -150,6 +189,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	// trường đại học
 	graphicsLayer.add(withUniversity(uit));
 	graphicsLayer.add(withUniversity(ftu));
+	graphicsLayer.add(withUniversity(tien_giang_cs1_university));
 	graphicsLayer.add(withUniversity(kien_giang_university));
 	graphicsLayer.add(withUniversity(bac_lieu_university));
 	graphicsLayer.add(withUniversity(kinh_te_cong_nghiep_long_an_university));
@@ -179,12 +219,18 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(truong_dai_hoc_fpt_can_tho));
 	graphicsLayer.add(withUniversity(greenwich_university));
 	graphicsLayer.add(withUniversity(ky_thuat_cong_nghe_can_tho));
+	graphicsLayer.add(withUniversity(cuu_long_uniersity));
+	graphicsLayer.add(withUniversity(xay_dung_mien_tay_uniersity));
+	graphicsLayer.add(withUniversity(su_pham_ki_thuat_vinh_long_uniersity));
+	graphicsLayer.add(withUniversity(vo_truong_toan_uniersity));
 	//trường đại học TPHCM
 	graphicsLayer.add(withUniversity(nguyentatthanh));
 	graphicsLayer.add(withUniversity(tonducthang)); 
 	graphicsLayer.add(withUniversity(mo)); 
 	graphicsLayer.add(withUniversity(fpt)); 
-
+	//trường đại học cà mau
+	graphicsLayer.add(withUniversity(binh_duong_ca_mau_uniersity));
+	graphicsLayer.add(withUniversity(ton_duc_thang_ca_mau_uniersity));
 	// đường
 	graphicsLayer.add(withWay(ql61));
 	graphicsLayer.add(withWay(quan_lo_phung_hiep));
@@ -205,6 +251,10 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(qlN1_long_an));
 	graphicsLayer.add(withWay(qlN2_long_an));
 	graphicsLayer.add(withWay(ql54));
+	graphicsLayer.add(withWay(ql50_tien_giang));
+	graphicsLayer.add(withWay(ql30_tien_giang));
+	graphicsLayer.add(withWay(ql60_tien_giang));
+	graphicsLayer.add(withWay(ql1A_tien_giang));
 	graphicsLayer.add(withWay(ql60));
 	graphicsLayer.add(withWay(ql61b));
 	graphicsLayer.add(withWay(ql13));
@@ -214,6 +264,11 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql50));
 	graphicsLayer.add(withWay(ah17));
 	graphicsLayer.add(withWay(ql55));
+	graphicsLayer.add(withWay(ql1A_ca_mau));
+	graphicsLayer.add(withWay(dt986b));
+	graphicsLayer.add(withWay(ql63));
+	graphicsLayer.add(withWay(ql1a_bac_lieu));
+	graphicsLayer.add(withWay(ql91b_bac_lieu));
 
 	map.add(graphicsLayer);
 });
