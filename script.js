@@ -87,7 +87,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		});
 	}
 
-	getLocation();
+	// getLocation();
 
 
 	const graphicsLayer = new GraphicsLayer();
