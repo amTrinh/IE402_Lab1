@@ -11,13 +11,13 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const view = new MapView({
 		container: 'viewDiv',
 		map: map,
-		zoom: 10,
-		center:  [105.21452156067664, 10.47320379432781], // longitude, latitude
+		zoom: 20,
+		center:    [107.15383082622806, 10.98612997129049], // longitude, latitude
 		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
 	// Get location
-	const getLocation = () => {
+	let getLocation = () => {
 		view.on("click", (event) => {
 			// Get the coordinates of the click on the view
 			const lat = Math.round(event.mapPoint.latitude * 100000000000000) / 100000000000000;
@@ -210,6 +210,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ah17));
 	graphicsLayer.add(withWay(ql55));
 	graphicsLayer.add(withWay(ql1A_ca_mau));
-
+	graphicsLayer.add(withWay(ql1A_dong_nai));
+	graphicsLayer.add(withWay(ql20_dong_nai));
 	map.add(graphicsLayer);
 });
