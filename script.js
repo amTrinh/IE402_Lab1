@@ -212,6 +212,10 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(can_tho_university));
 	graphicsLayer.add(withUniversity(tra_vinh_university));
 	graphicsLayer.add(withUniversity(utc));
+	graphicsLayer.add(withUniversity(cuu_long_uniersity));
+	graphicsLayer.add(withUniversity(xay_dung_mien_tay_uniersity));
+	graphicsLayer.add(withUniversity(su_pham_ki_thuat_vinh_long_uniersity));
+	graphicsLayer.add(withUniversity(vo_truong_toan_uniersity));
 	//trường đại học TPHCM
 	graphicsLayer.add(withUniversity(nguyentatthanh));
 	graphicsLayer.add(withUniversity(tonducthang)); 
