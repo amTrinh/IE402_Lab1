@@ -67,7 +67,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 
 	const withUniversity = (data) => {
 		return new Graphic({
-			symbol: { type: 'picture-marker', url: universityImg, width: '48px', height: '48px' },
+			symbol: { type: 'picture-marker', url: universityImg, width: '24px', height: '24px' },
 			geometry: { type: 'point', ...data } ,
 			attributes: data,
 		  	popupTemplate: {
