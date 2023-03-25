@@ -48,7 +48,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		});
 	}
 
-	// getLocation();
+	getLocation();
 
 
 	const graphicsLayer = new GraphicsLayer();
@@ -172,6 +172,13 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(can_tho_university));
 	graphicsLayer.add(withUniversity(tra_vinh_university));
 	graphicsLayer.add(withUniversity(utc));
+	// trường đại học cần thơ
+	graphicsLayer.add(withUniversity(tay_do_university));
+	graphicsLayer.add(withUniversity(truong_dai_hoc_nam_can_tho));
+	graphicsLayer.add(withUniversity(dai_hoc_y_duoc_can_tho));
+	graphicsLayer.add(withUniversity(truong_dai_hoc_fpt_can_tho));
+	graphicsLayer.add(withUniversity(greenwich_university));
+	graphicsLayer.add(withUniversity(ky_thuat_cong_nghe_can_tho));
 	//trường đại học TPHCM
 	graphicsLayer.add(withUniversity(nguyentatthanh));
 	graphicsLayer.add(withUniversity(tonducthang)); 
