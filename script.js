@@ -258,6 +258,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ah17));
 	graphicsLayer.add(withWay(ql55));
 	graphicsLayer.add(withWay(ql1A_ca_mau));
+	graphicsLayer.add(withWay(dt986b));
 
 	map.add(graphicsLayer);
 });
