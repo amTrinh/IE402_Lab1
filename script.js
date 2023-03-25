@@ -260,6 +260,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql1A_ca_mau));
 	graphicsLayer.add(withWay(dt986b));
 	graphicsLayer.add(withWay(ql63));
+	graphicsLayer.add(withWay(ql1a_bac_lieu));
 
 	map.add(graphicsLayer);
 });
