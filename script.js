@@ -12,7 +12,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		container: 'viewDiv',
 		map: map,
 		zoom: 10,
-		center:  [105.21452156067664, 10.47320379432781], // longitude, latitude
+		center:  [106.30781892876573, 10.41970833923412], // longitude, latitude
 		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
@@ -150,6 +150,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	// trường đại học
 	graphicsLayer.add(withUniversity(uit));
 	graphicsLayer.add(withUniversity(ftu));
+	graphicsLayer.add(withUniversity(tien_giang_cs1_university));
 	graphicsLayer.add(withUniversity(kien_giang_university));
 	graphicsLayer.add(withUniversity(bac_lieu_university));
 	graphicsLayer.add(withUniversity(kinh_te_cong_nghiep_long_an_university));
@@ -200,6 +201,10 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(qlN1_long_an));
 	graphicsLayer.add(withWay(qlN2_long_an));
 	graphicsLayer.add(withWay(ql54));
+	graphicsLayer.add(withWay(ql50_tien_giang));
+	graphicsLayer.add(withWay(ql30_tien_giang));
+	graphicsLayer.add(withWay(ql60_tien_giang));
+	graphicsLayer.add(withWay(ql1A_tien_giang));
 	graphicsLayer.add(withWay(ql60));
 	graphicsLayer.add(withWay(ql61b));
 	graphicsLayer.add(withWay(ql13));
