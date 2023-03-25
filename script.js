@@ -16,8 +16,45 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
+	function saveTextToClipboard(text) {
+		const textarea = document.createElement('textarea');
+		textarea.value = text;
+		document.body.appendChild(textarea);
+		textarea.select();
+		document.execCommand('copy');
+		document.body.removeChild(textarea);
+
+		// create a toast notification element
+		const toast = document.createElement('div');
+		toast.textContent = 'Text copied to clipboard!';
+		toast.style.position = 'fixed';
+		toast.style.bottom = '20px';
+		toast.style.left = '50%';
+		toast.style.transform = 'translateX(-50%)';
+		toast.style.padding = '10px 20px';
+		toast.style.backgroundColor = '#333';
+		toast.style.color = '#fff';
+		toast.style.borderRadius = '5px';
+		toast.style.opacity = '0';
+		toast.style.transition = 'opacity 0.3s ease-in-out';
+
+		// add the toast element to the document
+		document.body.appendChild(toast);
+
+		// animate the toast by changing its opacity
+		setTimeout(() => {
+			toast.style.opacity = '1';
+		}, 100);
+		setTimeout(() => {
+			toast.style.opacity = '0';
+		}, 2000);
+		setTimeout(() => {
+			document.body.removeChild(toast);
+		}, 2300);
+	}
+
 	// Get location
-	const getLocation = () => {
+	let getLocation = () => {
 		view.on("click", (event) => {
 			// Get the coordinates of the click on the view
 			const lat = Math.round(event.mapPoint.latitude * 100000000000000) / 100000000000000;
@@ -29,6 +66,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 				location: event.mapPoint // Set the location of the popup to the clicked location
 			});
 	
+			saveTextToClipboard("[" + lon + ", " + lat + "],");
+
 			const params = {
 				location: event.mapPoint
 			};
@@ -48,7 +87,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		});
 	}
 
-	// getLocation();
+	getLocation();
 
 
 	const graphicsLayer = new GraphicsLayer();
