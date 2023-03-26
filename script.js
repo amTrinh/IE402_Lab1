@@ -11,8 +11,9 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const view = new MapView({
 		container: 'viewDiv',
 		map: map,
-		zoom: 10,
-		center:  [106.30781892876573, 10.41970833923412], // longitude, latitude
+		zoom: 15,
+		center: [106.7916460407298, 10.89656520624297],
+		// longitude, latitude
 		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
@@ -87,7 +88,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		});
 	}
 
-	getLocation();
+	// getLocation();
 
 
 	const graphicsLayer = new GraphicsLayer();
@@ -214,6 +215,17 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(can_tho_university));
 	graphicsLayer.add(withUniversity(tra_vinh_university));
 	graphicsLayer.add(withUniversity(utc));
+	// trường đại học cần thơ
+	graphicsLayer.add(withUniversity(tay_do_university));
+	graphicsLayer.add(withUniversity(truong_dai_hoc_nam_can_tho));
+	graphicsLayer.add(withUniversity(dai_hoc_y_duoc_can_tho));
+	graphicsLayer.add(withUniversity(truong_dai_hoc_fpt_can_tho));
+	graphicsLayer.add(withUniversity(greenwich_university));
+	graphicsLayer.add(withUniversity(ky_thuat_cong_nghe_can_tho));
+	graphicsLayer.add(withUniversity(cuu_long_uniersity));
+	graphicsLayer.add(withUniversity(xay_dung_mien_tay_uniersity));
+	graphicsLayer.add(withUniversity(su_pham_ki_thuat_vinh_long_uniersity));
+	graphicsLayer.add(withUniversity(vo_truong_toan_uniersity));
 	//trường đại học TPHCM
 	graphicsLayer.add(withUniversity(nguyentatthanh));
 	graphicsLayer.add(withUniversity(tonducthang)); 
@@ -241,7 +253,6 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql62_long_an));
 	graphicsLayer.add(withWay(qlN1_long_an));
 	graphicsLayer.add(withWay(qlN2_long_an));
-	graphicsLayer.add(withWay(ql54));
 	graphicsLayer.add(withWay(ql50_tien_giang));
 	graphicsLayer.add(withWay(ql30_tien_giang));
 	graphicsLayer.add(withWay(ql60_tien_giang));
@@ -256,6 +267,24 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ah17));
 	graphicsLayer.add(withWay(ql55));
 	graphicsLayer.add(withWay(ql1A_ca_mau));
+	graphicsLayer.add(withWay(ql57_ben_tre));
+	graphicsLayer.add(withWay(dt986b));
+	graphicsLayer.add(withWay(ql61c_hau_giang));
+	graphicsLayer.add(withWay(ql1A_hau_giang));
+	graphicsLayer.add(withWay(ql1A_hau_giang_soc_trang));
+	graphicsLayer.add(withWay(ql91b_hau_giang_soc_trang));
+	graphicsLayer.add(withWay(ql63));
+	graphicsLayer.add(withWay(ql1a_bac_lieu));
+	graphicsLayer.add(withWay(ql91b_bac_lieu));
+	graphicsLayer.add(withWay(ql1A_vinh_long));
+	graphicsLayer.add(withWay(ql54_vinh_long_tra_vinh));
+	graphicsLayer.add(withWay(ql80_vinh_long));
+
+	graphicsLayer.add(withWay(ql1A_dong_nai));
+	graphicsLayer.add(withWay(ql20_dong_nai));
+	graphicsLayer.add(withWay(ql51_dong_nai));
+	graphicsLayer.add(withWay(ql1k_binh_duong));
+
 
 	map.add(graphicsLayer);
 });

@@ -1,7 +1,7 @@
 const ben_tre = {
 	title: 'Tỉnh Bến Tre',
-	population: '1.624.000',
-	area: '2.322 km²',
+	population: '1.289.100',
+	area: '2.394,8 km²',
 	color: [60, 43, 203, 0.8],
 	rings: [
 		[106.0282253, 10.2830858],

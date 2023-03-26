@@ -1,7 +1,7 @@
 const kien_giang = {
 	title: 'Tỉnh Kiên Giang',
-	population: '1.214.900',
-	area: '5.331 km²',
+	population: '2.109.000',
+	area: '6.348,5 km²',
 	color: [203, 102, 43, 0.8],
 	rings: [
 		[104.83407138338443, 9.529525105334422],
