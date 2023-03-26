@@ -189,6 +189,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	// trường đại học
 	graphicsLayer.add(withUniversity(uit));
 	graphicsLayer.add(withUniversity(ftu));
+	graphicsLayer.add(withUniversity(ba_ria_vung_tau_university));
+	graphicsLayer.add(withUniversity(dau_khi_viet_nam_university));
 	graphicsLayer.add(withUniversity(tien_giang_cs1_university));
 	graphicsLayer.add(withUniversity(kien_giang_university));
 	graphicsLayer.add(withUniversity(bac_lieu_university));
