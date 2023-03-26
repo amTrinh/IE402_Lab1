@@ -250,7 +250,6 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql62_long_an));
 	graphicsLayer.add(withWay(qlN1_long_an));
 	graphicsLayer.add(withWay(qlN2_long_an));
-	//graphicsLayer.add(withWay(ql54));
 	graphicsLayer.add(withWay(ql50_tien_giang));
 	graphicsLayer.add(withWay(ql30_tien_giang));
 	graphicsLayer.add(withWay(ql60_tien_giang));
@@ -274,7 +273,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql1a_bac_lieu));
 	graphicsLayer.add(withWay(ql91b_bac_lieu));
 
-	graphicsLayer.add(withWay(ql54_vinh_long));
+	graphicsLayer.add(withWay(ql54_vinh_long_tra_vinh));
 
 
 	map.add(graphicsLayer);

@@ -1,4 +1,4 @@
-const ql54_vinh_long = {
+const ql54_vinh_long_tra_vinh = {
 	description: '<a>Quốc Lộ 54, <br/>Chiều dài 155km,  <br/>Đi qua Đồng Tháp - Vĩnh Long -Trà Vinh</a>',
 	color: [128, 138, 131],
 	paths: [
