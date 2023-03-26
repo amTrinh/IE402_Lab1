@@ -11,8 +11,9 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const view = new MapView({
 		container: 'viewDiv',
 		map: map,
-		zoom: 20,
-		center:    [107.15383082622806, 10.98612997129049], // longitude, latitude
+		zoom: 15,
+		center: [106.7916460407298, 10.89656520624297],
+		// longitude, latitude
 		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
@@ -256,5 +257,9 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql1A_ca_mau));
 	graphicsLayer.add(withWay(ql1A_dong_nai));
 	graphicsLayer.add(withWay(ql20_dong_nai));
+	graphicsLayer.add(withWay(ql51_dong_nai));
+	graphicsLayer.add(withWay(ql1k_binh_duong));
+
+
 	map.add(graphicsLayer);
 });
