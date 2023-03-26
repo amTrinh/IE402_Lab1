@@ -266,9 +266,20 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql55));
 	graphicsLayer.add(withWay(ql1A_ca_mau));
 	graphicsLayer.add(withWay(dt986b));
+	
+//<<<<<<< HEAD
+	graphicsLayer.add(withWay(ql61c_hau_giang));
+	//graphicsLayer.add(withWay(ql1A_hau_giang));
+
+	//graphicsLayer.add(withWay(ql1A_hau_giang_soc_trang));
+	
+	//graphicsLayer.add(withWay(ql91b_hau_giang_soc_trang));
+
+//=======
 	graphicsLayer.add(withWay(ql63));
 	graphicsLayer.add(withWay(ql1a_bac_lieu));
 	graphicsLayer.add(withWay(ql91b_bac_lieu));
+//>>>>>>> caa29633aafce940f417461d42ff7c215546e5f6
 
 	map.add(graphicsLayer);
 });
