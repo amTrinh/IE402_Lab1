@@ -123,7 +123,7 @@ const ql30_tien_giang = {
 };
 
 const ql60_tien_giang = {
-	description:  '<a>Quốc Lộ 60, <br/>Chiều dài 115km, <br/>Đi qua Tiền Giang - Bến Tre - Trà Vinh</a>',
+	description:  '<a>Quốc Lộ 60, <br/>Chiều dài 115km, <br/>Đi qua Tiền Giang - Bến Tre - Trà Vinh - Sóc trăng</a>',
 	color: [128, 138, 131],
 	paths: [
         [106.344845546631, 10.3318059390276], // Giáp bến tre

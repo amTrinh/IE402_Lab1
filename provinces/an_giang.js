@@ -1,7 +1,7 @@
 const an_giang = {
 	title: 'Tỉnh An Giang',
 	population: '2.413.000',
-	area: '3.537 km²',
+	area: '3.536,7 km²',
 	color: [203, 43, 43, 0.8],
 	rings: [
 		[104.77854498537239, 10.519578637640407],
