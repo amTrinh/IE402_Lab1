@@ -250,7 +250,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql62_long_an));
 	graphicsLayer.add(withWay(qlN1_long_an));
 	graphicsLayer.add(withWay(qlN2_long_an));
-	graphicsLayer.add(withWay(ql54));
+	//graphicsLayer.add(withWay(ql54));
 	graphicsLayer.add(withWay(ql50_tien_giang));
 	graphicsLayer.add(withWay(ql30_tien_giang));
 	graphicsLayer.add(withWay(ql60_tien_giang));
@@ -266,18 +266,16 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql55));
 	graphicsLayer.add(withWay(ql1A_ca_mau));
 	graphicsLayer.add(withWay(dt986b));
-
-//<<<<<<< HEAD
 	graphicsLayer.add(withWay(ql61c_hau_giang));
 	graphicsLayer.add(withWay(ql1A_hau_giang));
 	graphicsLayer.add(withWay(ql1A_hau_giang_soc_trang));
 	graphicsLayer.add(withWay(ql91b_hau_giang_soc_trang));
-
-//=======
 	graphicsLayer.add(withWay(ql63));
 	graphicsLayer.add(withWay(ql1a_bac_lieu));
 	graphicsLayer.add(withWay(ql91b_bac_lieu));
-//>>>>>>> caa29633aafce940f417461d42ff7c215546e5f6
+
+	graphicsLayer.add(withWay(ql54_vinh_long));
+
 
 	map.add(graphicsLayer);
 });
