@@ -328,6 +328,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql1A_vinh_long));
 	graphicsLayer.add(withWay(ql54_vinh_long_tra_vinh));
 	graphicsLayer.add(withWay(ql80_vinh_long));
+	graphicsLayer.add(withWay(ql57_vinh_long));
 
 	graphicsLayer.add(withWay(ql1A_dong_nai));
 	graphicsLayer.add(withWay(ql20_dong_nai));
