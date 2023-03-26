@@ -272,8 +272,10 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql63));
 	graphicsLayer.add(withWay(ql1a_bac_lieu));
 	graphicsLayer.add(withWay(ql91b_bac_lieu));
-
+	graphicsLayer.add(withWay(ql1A_vinh_long));
 	graphicsLayer.add(withWay(ql54_vinh_long_tra_vinh));
+	graphicsLayer.add(withWay(ql80_vinh_long));
+
 
 
 	map.add(graphicsLayer);
