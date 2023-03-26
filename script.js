@@ -264,6 +264,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ah17));
 	graphicsLayer.add(withWay(ql55));
 	graphicsLayer.add(withWay(ql1A_ca_mau));
+	graphicsLayer.add(withWay(ql57_ben_tre));
 	graphicsLayer.add(withWay(dt986b));
 	graphicsLayer.add(withWay(ql61c_hau_giang));
 	graphicsLayer.add(withWay(ql1A_hau_giang));
