@@ -11,8 +11,14 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const view = new MapView({
 		container: 'viewDiv',
 		map: map,
+<<<<<<< HEAD
 		zoom: 14,
 		center: [104.92510097506322, 10.27593565558461], // longitude, latitude
+=======
+		zoom: 15,
+		center: [106.7916460407298, 10.89656520624297],
+		// longitude, latitude
+>>>>>>> 91236529bf04a5e1dc1801abd6cce411c91769f9
 		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
@@ -189,6 +195,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	// trường đại học
 	graphicsLayer.add(withUniversity(uit));
 	graphicsLayer.add(withUniversity(ftu));
+	graphicsLayer.add(withUniversity(ba_ria_vung_tau_university));
+	graphicsLayer.add(withUniversity(dau_khi_viet_nam_university));
 	graphicsLayer.add(withUniversity(tien_giang_cs1_university));
 	graphicsLayer.add(withUniversity(kien_giang_university));
 	graphicsLayer.add(withUniversity(bac_lieu_university));
@@ -228,6 +236,55 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(tonducthang)); 
 	graphicsLayer.add(withUniversity(mo)); 
 	graphicsLayer.add(withUniversity(fpt)); 
+	graphicsLayer.add(withUniversity(rmit));
+	graphicsLayer.add(withUniversity(vanlangcschinh)); 
+	graphicsLayer.add(withUniversity(vanlangcs1)); 
+	graphicsLayer.add(withUniversity(vanlangcs2));
+	graphicsLayer.add(withUniversity(congnghiep));
+	graphicsLayer.add(withUniversity(kinhte)); 
+	graphicsLayer.add(withUniversity(yduoc)); 
+	graphicsLayer.add(withUniversity(luatcs1)); 
+	graphicsLayer.add(withUniversity(luatcs2));
+	graphicsLayer.add(withUniversity(supham)); 
+	graphicsLayer.add(withUniversity(saigon)); 
+	graphicsLayer.add(withUniversity(khtnq5)); 
+	graphicsLayer.add(withUniversity(khtntd));
+	graphicsLayer.add(withUniversity(pnt)); 
+	graphicsLayer.add(withUniversity(cntp)); 
+	graphicsLayer.add(withUniversity(csndq7));
+	graphicsLayer.add(withUniversity(csndtd));
+	graphicsLayer.add(withUniversity(khxhnvhcm)); 
+	graphicsLayer.add(withUniversity(khxhnvtd)); 
+	graphicsLayer.add(withUniversity(kientruc)); 
+	graphicsLayer.add(withUniversity(hocvienhangkhong));
+	graphicsLayer.add(withUniversity(bkcs1)); 
+	graphicsLayer.add(withUniversity(bkcs2)); 
+	graphicsLayer.add(withUniversity(nhacvienhcm));
+	graphicsLayer.add(withUniversity(gtvthcm));
+	graphicsLayer.add(withUniversity(phgtvt)); 
+	graphicsLayer.add(withUniversity(hutechhcm)); 
+	graphicsLayer.add(withUniversity(hutechtd));
+	graphicsLayer.add(withUniversity(kinhtetaichinh));
+	graphicsLayer.add(withUniversity(hoasen)); 
+	graphicsLayer.add(withUniversity(mythuat)); 
+	graphicsLayer.add(withUniversity(hongbang)); 
+	graphicsLayer.add(withUniversity(spktcs1));
+	graphicsLayer.add(withUniversity(spktcs2)); 
+	graphicsLayer.add(withUniversity(nganhang)); 
+	graphicsLayer.add(withUniversity(nonglam));
+	graphicsLayer.add(withUniversity(ktluat));
+	graphicsLayer.add(withUniversity(tdtt)); 
+	graphicsLayer.add(withUniversity(quocte)); 
+	graphicsLayer.add(withUniversity(anninhnd));
+	graphicsLayer.add(withUniversity(phthuyloi));
+	graphicsLayer.add(withUniversity(trandainghia));
+	graphicsLayer.add(withUniversity(taichinhmarketing));
+	graphicsLayer.add(withUniversity(tnmt));
+	graphicsLayer.add(withUniversity(vanhoacs1));
+	graphicsLayer.add(withUniversity(vanhoacs2));
+	graphicsLayer.add(withUniversity(hungvuong));
+	graphicsLayer.add(withUniversity(greenwich));
+	graphicsLayer.add(withUniversity(vanhien));
 	//trường đại học cà mau
 	graphicsLayer.add(withUniversity(binh_duong_ca_mau_uniersity));
 	graphicsLayer.add(withUniversity(ton_duc_thang_ca_mau_uniersity));
@@ -250,7 +307,6 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql62_long_an));
 	graphicsLayer.add(withWay(qlN1_long_an));
 	graphicsLayer.add(withWay(qlN2_long_an));
-	graphicsLayer.add(withWay(ql54));
 	graphicsLayer.add(withWay(ql50_tien_giang));
 	graphicsLayer.add(withWay(ql30_tien_giang));
 	graphicsLayer.add(withWay(ql60_tien_giang));
@@ -265,13 +321,27 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ah17));
 	graphicsLayer.add(withWay(ql55));
 	graphicsLayer.add(withWay(ql1A_ca_mau));
+	graphicsLayer.add(withWay(ql57_ben_tre));
 	graphicsLayer.add(withWay(dt986b));
+	graphicsLayer.add(withWay(ql61c_hau_giang));
+	graphicsLayer.add(withWay(ql1A_hau_giang));
+	graphicsLayer.add(withWay(ql1A_hau_giang_soc_trang));
+	graphicsLayer.add(withWay(ql91b_hau_giang_soc_trang));
 	graphicsLayer.add(withWay(ql63));
 	graphicsLayer.add(withWay(ql1a_bac_lieu));
 	graphicsLayer.add(withWay(ql91b_bac_lieu));
 	graphicsLayer.add(withWay(ql91_an_giang));
 	graphicsLayer.add(withWay(ql80_kien_giang));
 	graphicsLayer.add(withWay(qln1));
+	graphicsLayer.add(withWay(ql1A_vinh_long));
+	graphicsLayer.add(withWay(ql54_vinh_long_tra_vinh));
+	graphicsLayer.add(withWay(ql80_vinh_long));
+	graphicsLayer.add(withWay(ql57_vinh_long));
+
+	graphicsLayer.add(withWay(ql1A_dong_nai));
+	graphicsLayer.add(withWay(ql20_dong_nai));
+	graphicsLayer.add(withWay(ql51_dong_nai));
+	graphicsLayer.add(withWay(ql1k_binh_duong));
 
 
 	map.add(graphicsLayer);
