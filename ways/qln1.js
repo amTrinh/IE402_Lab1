@@ -1,5 +1,5 @@
 const qln1 = {
-	description: '<a>Quốc Lộ 54, <br/>Chiều dài 155km,  <br/>Đi qua Đồng Tháp - Vĩnh Long -Trà Vinh</a>',
+	description: '<a>Quốc Lộ N1, <br/>Chiều dài 235km,  <br/>Đi qua An Giang - Kiên Giang</a>',
 	color: [128, 138, 131],
 	paths: [
         [104.94363362889356, 10.60473868901073],

@@ -116,6 +116,7 @@
 		<script src="ways/ql_dong_nai.js"></script>
 		<script src="ways/ql_binh_duong.js"></script>
 		<script src="ways/ql57_vinh_long.js"></script>
+		<script src="ways/ql1A_can_tho.js"></script>
 
 		<script src="cities/rach_gia.js"></script>
 		<script src="cities/cityImg.js"></script>
@@ -138,6 +139,96 @@
 		<script src="cities/ben_tre.js"></script>
 		<script src="cities/tra_vinh.js"></script>
 		<script src="cities/ca_mau.js"></script>
+
+		
+		<!-- <script>
+			require(["esri/rest/locator", "esri/Map", "esri/views/MapView"], (locator, Map, MapView) => {
+			  // Set up a locator url using the world geocoding service
+			  const locatorUrl = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer";
+	  
+			  // Create the Map
+			  const map = new Map({
+				basemap: "streets-navigation-vector"
+			  });
+	  
+			  // Crete the MapViewa
+			  const view = new MapView({
+				container: "viewDiv",
+				map: map,
+				center: [106.30781892876573, 10.41970833923412], 
+				zoom: 12
+			  });
+	  
+			function saveTextToClipboard(text) {
+				const textarea = document.createElement('textarea');
+				textarea.value = text;
+				document.body.appendChild(textarea);
+				textarea.select();
+				document.execCommand('copy');
+				document.body.removeChild(textarea);
+
+				// create a toast notification element
+				const toast = document.createElement('div');
+				toast.textContent = 'Text copied to clipboard!';
+				toast.style.position = 'fixed';
+				toast.style.bottom = '20px';
+				toast.style.left = '50%';
+				toast.style.transform = 'translateX(-50%)';
+				toast.style.padding = '10px 20px';
+				toast.style.backgroundColor = '#333';
+				toast.style.color = '#fff';
+				toast.style.borderRadius = '5px';
+				toast.style.opacity = '0';
+				toast.style.transition = 'opacity 0.3s ease-in-out';
+
+				// add the toast element to the document
+				document.body.appendChild(toast);
+
+				// animate the toast by changing its opacity
+				setTimeout(() => {
+					toast.style.opacity = '1';
+				}, 100);
+				setTimeout(() => {
+					toast.style.opacity = '0';
+				}, 2000);
+				setTimeout(() => {
+					document.body.removeChild(toast);
+				}, 2300);
+			}
+
+			  view.popup.autoOpenEnabled = false;
+			  view.on("click", (event) => {
+				// Get the coordinates of the click on the view
+				const lat = Math.round(event.mapPoint.latitude * 100000000000000) / 100000000000000;
+				const lon = Math.round(event.mapPoint.longitude * 100000000000000) / 100000000000000;
+	  
+				view.popup.open({
+				  // Set the popup's title to the coordinates of the location
+				  title: "Reverse geocode: [" + lon + ", " + lat + "]",
+				  location: event.mapPoint // Set the location of the popup to the clicked location
+				});
+				saveTextToClipboard("[" + lon + ", " + lat + "],")
+
+				const params = {
+				  location: event.mapPoint
+				};
+	  
+				// Display the popup
+				// Execute a reverse geocode using the clicked location
+				locator
+				  .locationToAddress(locatorUrl, params)
+				  .then((response) => {
+					// If an address is successfully found, show it in the popup's content
+					view.popup.content = response.address;
+				  })
+				  .catch(() => {
+					// If the promise fails and no result is found, show a generic message
+					view.popup.content = "No address was found for this location";
+				  });
+			  });
+			});
+		  </script> -->
+
 		<script src="script.js"></script>
 	</body>
 </html>

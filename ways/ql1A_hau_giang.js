@@ -1,5 +1,5 @@
 const ql1A_hau_giang = {
-	description: '<a>aaaaaa</a>',
+	description: '<a>Quốc lộ 1A</a>',
 	color: [128, 138, 131],
 	paths: [
 		[105.72536354622272, 9.92572707099655],

@@ -1,5 +1,5 @@
 const ql80_kien_giang = {
-	description: '<a>Quốc lộ 63 là con đường nối liền 2 tỉnh Kiên Giang và Cà Mau, dài 110 km.</a>',
+	description: '<a>Quốc lộ 80 là con đường nối liền 2 tỉnh  Vĩnh Long, Đồng Tháp, An Giang, Cần Thơ, Kiên Giang, dài 215km.</a>',
 	color: [128, 138, 131],
 	paths: [
         [105.48611747704778, 10.31532004532508],

@@ -1,5 +1,5 @@
 const ql91_an_giang = {
-	description: '<a>Quốc Lộ 54, <br/>Chiều dài 155km,  <br/>Đi qua Đồng Tháp - Vĩnh Long -Trà Vinh</a>',
+	description: '<a>Quốc Lộ 91, <br/>Chiều dài 142km,  <br/>Đi qua Cần Thơ - An Giang</a>',
 	color: [128, 138, 131],
         // Từ cần thơ đến an giang
 
