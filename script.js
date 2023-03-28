@@ -11,14 +11,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const view = new MapView({
 		container: 'viewDiv',
 		map: map,
-<<<<<<< HEAD
 		zoom: 14,
 		center: [104.92510097506322, 10.27593565558461], // longitude, latitude
-=======
-		zoom: 15,
-		center: [106.7916460407298, 10.89656520624297],
-		// longitude, latitude
->>>>>>> 91236529bf04a5e1dc1801abd6cce411c91769f9
 		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
