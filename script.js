@@ -336,6 +336,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql51_dong_nai));
 	graphicsLayer.add(withWay(ql1k_binh_duong));
 	graphicsLayer.add(withWay(ql1A_can_tho))
+	graphicsLayer.add(withWay(ql91c))
 
 
 	map.add(graphicsLayer);
