@@ -1,4 +1,4 @@
-const ql62_long_an = {
+const ql62 = {
 	description: '<a>Quốc Lộ 62, <br/>Chiều dài 93km,  <br/>Đi qua Long An (Tân An - Kiến Tường)</a>',
 	color: [128, 138, 131],
 	paths: [
