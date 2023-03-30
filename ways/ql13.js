@@ -2,7 +2,6 @@ const ql13 = {
 	description: '<a>Quốc Lộ 13, <br/>Chiều dài 145km,  <br/>Đi qua Hồ Chí Minh - Bình Dương - Bình Phước</a>',
 	color: [128, 138, 131],
 	paths: [
-		//còn thiếu tọa độ của hcm và bình dương
 		//tọa độ HCM
 		[106.712302034258, 10.8103107224051],
 		[106.7123617428802, 10.8106822513645],
