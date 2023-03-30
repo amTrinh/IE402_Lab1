@@ -11,9 +11,9 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const view = new MapView({
 		container: 'viewDiv',
 		map: map,
-		zoom: 14,
-		center: [105.6187296, 10.4815586], // longitude, latitude
-		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
+		zoom: 8,
+		// center: [106.4119117, 10.8186726], // longitude, latitude
+		center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
 	function saveTextToClipboard(text) {
