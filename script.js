@@ -12,7 +12,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		container: 'viewDiv',
 		map: map,
 		zoom: 14,
-		center: [104.92510097506322, 10.27593565558461], // longitude, latitude
+		center: [105.6187296, 10.4815586], // longitude, latitude
 		// center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
 	});
 
@@ -57,8 +57,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	let getLocation = () => {
 		view.on("click", (event) => {
 			// Get the coordinates of the click on the view
-			const lat = Math.round(event.mapPoint.latitude * 100000000000000) / 100000000000000;
-			const lon = Math.round(event.mapPoint.longitude * 100000000000000) / 100000000000000;
+			const lat = Math.round(event.mapPoint.latitude * 10000000) / 10000000;
+			const lon = Math.round(event.mapPoint.longitude * 10000000) / 10000000;
 	
 			view.popup.open({
 			// Set the popup's title to the coordinates of the location
@@ -294,7 +294,6 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql54_dong_thap));
 	graphicsLayer.add(withWay(ql80_dong_thap));
 	graphicsLayer.add(withWay(qlN2_dong_thap));
-	graphicsLayer.add(withWay(qlN2B_dong_thap));
 	graphicsLayer.add(withWay(ql1A_long_an_d1));
 	graphicsLayer.add(withWay(ql1A_long_an_d2));
 	graphicsLayer.add(withWay(ql50_long_an));
