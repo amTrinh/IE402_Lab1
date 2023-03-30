@@ -59,31 +59,31 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 			// Get the coordinates of the click on the view
 			const lat = Math.round(event.mapPoint.latitude * 10000000) / 10000000;
 			const lon = Math.round(event.mapPoint.longitude * 10000000) / 10000000;
-	
+
 			view.popup.open({
-			// Set the popup's title to the coordinates of the location
+				// Set the popup's title to the coordinates of the location
 				title: "Reverse geocode: [" + lon + ", " + lat + "],",
 				location: event.mapPoint // Set the location of the popup to the clicked location
 			});
-	
+
 			saveTextToClipboard("[" + lon + ", " + lat + "],");
 
 			const params = {
 				location: event.mapPoint
 			};
-	
+
 			// Display the popup
 			// Execute a reverse geocode using the clicked location
 			locator
-			.locationToAddress(locatorUrl, params)
-			.then((response) => {
-				// If an address is successfully found, show it in the popup's content
-				view.popup.content = response.address;
-			})
-			.catch(() => {
-				// If the promise fails and no result is found, show a generic message
-				view.popup.content = "No address was found for this location";
-			});
+				.locationToAddress(locatorUrl, params)
+				.then((response) => {
+					// If an address is successfully found, show it in the popup's content
+					view.popup.content = response.address;
+				})
+				.catch(() => {
+					// If the promise fails and no result is found, show a generic message
+					view.popup.content = "No address was found for this location";
+				});
 		});
 	}
 
@@ -107,12 +107,12 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const withUniversity = (data) => {
 		return new Graphic({
 			symbol: { type: 'picture-marker', url: universityImg, width: '24px', height: '24px' },
-			geometry: { type: 'point', ...data } ,
+			geometry: { type: 'point', ...data },
 			attributes: data,
-		  	popupTemplate: {
-			title: "{title}",
-			content: '<p>Địa chỉ: {address}</p>',
-		  },
+			popupTemplate: {
+				title: "{title}",
+				content: '<p>Địa chỉ: {address}</p>',
+			},
 		});
 	};
 
@@ -127,19 +127,19 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 
 	const withCity = (data) => {
 		return new Graphic({
-		  symbol: {
-			type: "picture-marker",
-			url: cityImg,
-			width: "24px",
-			height: "24px",
-		  },
-		  geometry: { type: "point", ...data },
-		  attributes: data,
-		  popupTemplate: {
-			title: "{title}",
-		  },
+			symbol: {
+				type: "picture-marker",
+				url: cityImg,
+				width: "24px",
+				height: "24px",
+			},
+			geometry: { type: "point", ...data },
+			attributes: data,
+			popupTemplate: {
+				title: "{title}",
+			},
 		});
-	  };
+	};
 	// tỉnh
 	graphicsLayer.add(withProvince(ca_mau));
 	graphicsLayer.add(withProvince(bac_lieu));
@@ -227,48 +227,48 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(vo_truong_toan_uniersity));
 	//trường đại học TPHCM
 	graphicsLayer.add(withUniversity(nguyentatthanh));
-	graphicsLayer.add(withUniversity(tonducthang)); 
-	graphicsLayer.add(withUniversity(mo)); 
-	graphicsLayer.add(withUniversity(fpt)); 
+	graphicsLayer.add(withUniversity(tonducthang));
+	graphicsLayer.add(withUniversity(mo));
+	graphicsLayer.add(withUniversity(fpt));
 	graphicsLayer.add(withUniversity(rmit));
-	graphicsLayer.add(withUniversity(vanlangcschinh)); 
-	graphicsLayer.add(withUniversity(vanlangcs1)); 
+	graphicsLayer.add(withUniversity(vanlangcschinh));
+	graphicsLayer.add(withUniversity(vanlangcs1));
 	graphicsLayer.add(withUniversity(vanlangcs2));
 	graphicsLayer.add(withUniversity(congnghiep));
-	graphicsLayer.add(withUniversity(kinhte)); 
-	graphicsLayer.add(withUniversity(yduoc)); 
-	graphicsLayer.add(withUniversity(luatcs1)); 
+	graphicsLayer.add(withUniversity(kinhte));
+	graphicsLayer.add(withUniversity(yduoc));
+	graphicsLayer.add(withUniversity(luatcs1));
 	graphicsLayer.add(withUniversity(luatcs2));
-	graphicsLayer.add(withUniversity(supham)); 
-	graphicsLayer.add(withUniversity(saigon)); 
-	graphicsLayer.add(withUniversity(khtnq5)); 
+	graphicsLayer.add(withUniversity(supham));
+	graphicsLayer.add(withUniversity(saigon));
+	graphicsLayer.add(withUniversity(khtnq5));
 	graphicsLayer.add(withUniversity(khtntd));
-	graphicsLayer.add(withUniversity(pnt)); 
-	graphicsLayer.add(withUniversity(cntp)); 
+	graphicsLayer.add(withUniversity(pnt));
+	graphicsLayer.add(withUniversity(cntp));
 	graphicsLayer.add(withUniversity(csndq7));
 	graphicsLayer.add(withUniversity(csndtd));
-	graphicsLayer.add(withUniversity(khxhnvhcm)); 
-	graphicsLayer.add(withUniversity(khxhnvtd)); 
-	graphicsLayer.add(withUniversity(kientruc)); 
+	graphicsLayer.add(withUniversity(khxhnvhcm));
+	graphicsLayer.add(withUniversity(khxhnvtd));
+	graphicsLayer.add(withUniversity(kientruc));
 	graphicsLayer.add(withUniversity(hocvienhangkhong));
-	graphicsLayer.add(withUniversity(bkcs1)); 
-	graphicsLayer.add(withUniversity(bkcs2)); 
+	graphicsLayer.add(withUniversity(bkcs1));
+	graphicsLayer.add(withUniversity(bkcs2));
 	graphicsLayer.add(withUniversity(nhacvienhcm));
 	graphicsLayer.add(withUniversity(gtvthcm));
-	graphicsLayer.add(withUniversity(phgtvt)); 
-	graphicsLayer.add(withUniversity(hutechhcm)); 
+	graphicsLayer.add(withUniversity(phgtvt));
+	graphicsLayer.add(withUniversity(hutechhcm));
 	graphicsLayer.add(withUniversity(hutechtd));
 	graphicsLayer.add(withUniversity(kinhtetaichinh));
-	graphicsLayer.add(withUniversity(hoasen)); 
-	graphicsLayer.add(withUniversity(mythuat)); 
-	graphicsLayer.add(withUniversity(hongbang)); 
+	graphicsLayer.add(withUniversity(hoasen));
+	graphicsLayer.add(withUniversity(mythuat));
+	graphicsLayer.add(withUniversity(hongbang));
 	graphicsLayer.add(withUniversity(spktcs1));
-	graphicsLayer.add(withUniversity(spktcs2)); 
-	graphicsLayer.add(withUniversity(nganhang)); 
+	graphicsLayer.add(withUniversity(spktcs2));
+	graphicsLayer.add(withUniversity(nganhang));
 	graphicsLayer.add(withUniversity(nonglam));
 	graphicsLayer.add(withUniversity(ktluat));
-	graphicsLayer.add(withUniversity(tdtt)); 
-	graphicsLayer.add(withUniversity(quocte)); 
+	graphicsLayer.add(withUniversity(tdtt));
+	graphicsLayer.add(withUniversity(quocte));
 	graphicsLayer.add(withUniversity(anninhnd));
 	graphicsLayer.add(withUniversity(phthuyloi));
 	graphicsLayer.add(withUniversity(trandainghia));
