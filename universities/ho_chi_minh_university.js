@@ -1,7 +1,7 @@
     const nguyentatthanh = 
     {
         title:"ĐH Nguyễn Tất Thành",
-        address: "300A Nguyễn Tất Thành, Phường 13, Quận 4, TP. Hồ Chí Minh, Việt Nam",
+        address: "300A Nguyễn Tất Thành, Phường 13, Quận 4, TP. Hồ Chí Minh",
         longitude: 106.7104006564399, 
         latitude: 10.7611845732232
     };
@@ -9,7 +9,7 @@
     const tonducthang =
     {
         title:"ĐH Tôn Đức Thắng",
-        address: "Số 19 Nguyễn Hữu Thọ, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh, Việt Nam",
+        address: "Số 19 Nguyễn Hữu Thọ, Phường Tân Phong, Quận 7, TP. Hồ Chí Minh",
         longitude: 106.6998707431153, 
         latitude: 10.732871657269
     };
@@ -32,7 +32,7 @@
     const rmit =
     {
         title:"ĐH RMIT",
-        address: "",
+        address: "702 Đ. Nguyễn Văn Linh, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh",
         longitude: 106.695995780185,
         latitude: 10.729360468795
     };
@@ -64,7 +64,7 @@
     const congnghiep =
     {
         title:"ĐH Công Nghiệp",
-        address: "",
+        address: "12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Thành phố Hồ Chí Minh",
         longitude: 106.6869771501071,
         latitude: 10.8222211234767
     };
@@ -72,7 +72,7 @@
     const kinhte =
     {
         title:"ĐH Kinh Tế",
-        address: "",
+        address: "59C Nguyễn Đình Chiểu, Phường 6, Quận 3, Thành phố Hồ Chí Minh",
         longitude: 106.6947787113037,
         latitude: 10.7829751437534
     };
@@ -104,7 +104,7 @@
     const supham =
     {
         title:"ĐH Sư Phạm",
-        address: "",
+        address: "Đ. An D. Vương, Phường 4, Quận 5, Thành phố Hồ Chí Minh",
         longitude: 106.6822668653169,
         latitude: 10.7611124505424
     };
@@ -112,7 +112,7 @@
     const saigon =
     {
         title:"ĐH Sài Gòn",
-        address: "",
+        address: "273 Đ. An D. Vương, Phường 3, Quận 5, Thành phố Hồ Chí Minh",
         longitude: 106.6823557471173,
         latitude: 10.7599417658669
     };
@@ -120,7 +120,7 @@
     const khtnq5 =
     {
         title:"ĐH Khoa Học Tự Nhiên TPHCM",
-        address: "227 Đ. Nguyễn Văn Cừ, Phường 4, Quận 5, Thành phố Hồ Chí Minh, Việt Nam",
+        address: "227 Đ. Nguyễn Văn Cừ, Phường 4, Quận 5, Thành phố Hồ Chí Minh",
         longitude: 106.6823336828931,
         latitude: 10.7625100397561
     };
@@ -128,7 +128,7 @@
     const khtntd =
     {
         title:"ĐH Khoa Học Tự Nhiên TP. Thủ Đức Cơ Sở Linh Trung",
-        address: "",
+        address: "Phường Linh Trung, Thành Phố Thủ Đức, Thành phố Hồ Chí Minh",
         longitude: 106.7977161153177,
         latitude: 10.8759258746952
     };
@@ -168,7 +168,7 @@
     const khxhnvhcm =
     {
         title:"ĐH Khoa Học Xã Hội và Nhân Văn TP. HCM",
-        address: "10-12 Đ. Đinh Tiên Hoàng, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt Nam",
+        address: "10-12 Đ. Đinh Tiên Hoàng, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
         longitude: 106.7027750799656,
         latitude: 10.7858937573751
     };
@@ -176,7 +176,7 @@
     const khxhnvtd =
     {
         title:"ĐH Khoa Học Xã Hội và Nhân Văn TP. Thủ Đức",
-        address: "",
+        address: "Khu Phố 6, Thủ Đức, Thành phố Hồ Chí Minh",
         longitude: 106.8023257527647,
         latitude: 10.8724762402082
     };
@@ -184,7 +184,7 @@
     const kientruc =
     {
         title:"ĐH Kiến Trúc",
-        address: "",
+        address: "196 Pasteur, Phường 6, Quận 3, Thành phố Hồ Chí Minh, Việt Nam",
         longitude: 106.6944724341229,
         latitude: 10.7819445536455
     };
@@ -192,7 +192,7 @@
     const hocvienhangkhong =
     {
         title:"Học Viện Hàng Không Việt Nam",
-        address: "",
+        address: "104 D. Nguyễn Văn Trỗi, Phường 8, Phú Nhuận, Thành phố Hồ Chí Minh, Việt Nam",
         longitude: 106.6729818451233,
         latitude: 10.7971850433652
     };
