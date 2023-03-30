@@ -293,13 +293,12 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql30_dong_thap));
 	graphicsLayer.add(withWay(ql54_dong_thap));
 	graphicsLayer.add(withWay(ql80_dong_thap));
-	graphicsLayer.add(withWay(qlN2_dong_thap));
+	graphicsLayer.add(withWay(qlN2_dong_thap_long_an));
 	graphicsLayer.add(withWay(ql1A_long_an_d1));
 	graphicsLayer.add(withWay(ql1A_long_an_d2));
 	graphicsLayer.add(withWay(ql50_long_an));
 	graphicsLayer.add(withWay(ql62_long_an));
 	graphicsLayer.add(withWay(qlN1_long_an));
-	graphicsLayer.add(withWay(qlN2_long_an));
 	graphicsLayer.add(withWay(ql50_tien_giang));
 	graphicsLayer.add(withWay(ql30_tien_giang));
 	graphicsLayer.add(withWay(ql60_tien_giang));
