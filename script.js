@@ -209,11 +209,11 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(nguyen_hue_university));
 	graphicsLayer.add(withUniversity(lam_nghiep_cs2_university));
 	graphicsLayer.add(withUniversity(dong_thap_university));
-	graphicsLayer.add(withUniversity(hcmut));
+	//graphicsLayer.add(withUniversity(hcmut));
 	graphicsLayer.add(withUniversity(an_giang_university));
 	graphicsLayer.add(withUniversity(can_tho_university));
 	graphicsLayer.add(withUniversity(tra_vinh_university));
-	graphicsLayer.add(withUniversity(utc));
+	//graphicsLayer.add(withUniversity(utc));
 	// trường đại học cần thơ
 	graphicsLayer.add(withUniversity(tay_do_university));
 	graphicsLayer.add(withUniversity(truong_dai_hoc_nam_can_tho));
