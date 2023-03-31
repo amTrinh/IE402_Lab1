@@ -420,3 +420,19 @@
         longitude: 106.6626790887955,
         latitude: 10.793568179995
     };
+
+    const uit = 
+    { 
+        title:"ĐH Công Nghệ Thông Tin",
+        address:"Đường Hàn Thuyên, khu phố 6 P, Thủ Đức, Thành phố Hồ Chí Minh",
+        longitude: 106.8030541, 
+        latitude: 10.8700089 
+    };
+
+    const ftu = 
+    { 
+        title:"ĐH Ngoại Thương Cơ Sở II TP. HCM",
+        address:"15 Đường D5, Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh",
+        longitude: 106.713052, 
+        latitude: 10.806903
+    };
