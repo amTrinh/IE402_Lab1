@@ -186,6 +186,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withCity(ben_tre_city));
 	graphicsLayer.add(withCity(tra_vinh_city));
 	graphicsLayer.add(withCity(ca_mau_city));
+	graphicsLayer.add(withCity(thu_duc_city));
+	graphicsLayer.add(withCity(baria_vungtau_city));
 	// trường đại học
 	graphicsLayer.add(withUniversity(uit));
 	graphicsLayer.add(withUniversity(ftu));
