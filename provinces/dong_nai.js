@@ -1,7 +1,7 @@
 const dong_nai = {
 	title: 'Tỉnh Đồng Nai',
 	population: '3.097.000',
-	area: '5.906 km²',
+	area: '5.906',
 	color: [112, 203, 43, 0.8],
 	rings: [
 		[106.7511678, 10.7103776],

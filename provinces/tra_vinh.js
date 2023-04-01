@@ -1,7 +1,7 @@
 const tra_vinh = {
 	title: 'Tỉnh Trà Vinh',
 	population: '1.286.000',
-	area: '2.295,1 km²',
+	area: '2.295,1',
 	color: [186, 203, 43, 0.8],
 	rings: [
 		[105.9547258, 9.9196795],

@@ -1,6 +1,5 @@
 const ql55 = {
-	description:
-		'<a>Quốc lộ 55</a>',
+	description: '<a>Quốc Lộ 55, <br/>Chiều dài 219km,  <br/>Đi qua Bà Rịa – Vũng Tàu, Bình Thuận, và Lâm Đồng, </a>',
 	color: [128, 138, 131],
 	paths: [
 		//Bà Rịa Vũng Tàu

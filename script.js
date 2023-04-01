@@ -11,84 +11,9 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	const view = new MapView({
 		container: 'viewDiv',
 		map: map,
-		zoom: 8,
-		// center: [106.4119117, 10.8186726], // longitude, latitude
-		center: [106.10183715820308, 10.583671721437], // longitude, latitude 10.8811081,106.7976408
+		zoom: 8.5,
+		center: [106.10183715820308, 10.583671721437], 
 	});
-
-	function saveTextToClipboard(text) {
-		const textarea = document.createElement('textarea');
-		textarea.value = text;
-		document.body.appendChild(textarea);
-		textarea.select();
-		document.execCommand('copy');
-		document.body.removeChild(textarea);
-
-		// create a toast notification element
-		const toast = document.createElement('div');
-		toast.textContent = 'Text copied to clipboard!';
-		toast.style.position = 'fixed';
-		toast.style.bottom = '20px';
-		toast.style.left = '50%';
-		toast.style.transform = 'translateX(-50%)';
-		toast.style.padding = '10px 20px';
-		toast.style.backgroundColor = '#333';
-		toast.style.color = '#fff';
-		toast.style.borderRadius = '5px';
-		toast.style.opacity = '0';
-		toast.style.transition = 'opacity 0.3s ease-in-out';
-
-		// add the toast element to the document
-		document.body.appendChild(toast);
-
-		// animate the toast by changing its opacity
-		setTimeout(() => {
-			toast.style.opacity = '1';
-		}, 100);
-		setTimeout(() => {
-			toast.style.opacity = '0';
-		}, 2000);
-		setTimeout(() => {
-			document.body.removeChild(toast);
-		}, 2300);
-	}
-
-	// Get location
-	let getLocation = () => {
-		view.on("click", (event) => {
-			// Get the coordinates of the click on the view
-			const lat = Math.round(event.mapPoint.latitude * 10000000) / 10000000;
-			const lon = Math.round(event.mapPoint.longitude * 10000000) / 10000000;
-
-			view.popup.open({
-				// Set the popup's title to the coordinates of the location
-				title: "Reverse geocode: [" + lon + ", " + lat + "],",
-				location: event.mapPoint // Set the location of the popup to the clicked location
-			});
-
-			saveTextToClipboard("[" + lon + ", " + lat + "],");
-
-			const params = {
-				location: event.mapPoint
-			};
-
-			// Display the popup
-			// Execute a reverse geocode using the clicked location
-			locator
-				.locationToAddress(locatorUrl, params)
-				.then((response) => {
-					// If an address is successfully found, show it in the popup's content
-					view.popup.content = response.address;
-				})
-				.catch(() => {
-					// If the promise fails and no result is found, show a generic message
-					view.popup.content = "No address was found for this location";
-				});
-		});
-	}
-
-	// getLocation();
-
 
 	const graphicsLayer = new GraphicsLayer();
 
@@ -98,8 +23,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 			symbol: { type: 'simple-fill', color: data.color },
 			attributes: data,
 			popupTemplate: {
-				title: '{title}',
-				content: '<a>Dân số: {population} <br> Diện tích: {area}</a>',
+				title: '{title}.',
+				content: '<a>Dân số: {population} người. <br> Diện tích: {area} km².</a>',
 			},
 		});
 	};
@@ -110,8 +35,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 			geometry: { type: 'point', ...data },
 			attributes: data,
 			popupTemplate: {
-				title: "{title}",
-				content: '<p>Địa chỉ: {address}</p>',
+				title: "{title}.",
+				content: '<p>Địa chỉ: {address}.</p>',
 			},
 		});
 	};
@@ -120,7 +45,7 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 		return new Graphic({
 			symbol: { type: 'simple-line', color: data.color, width: 3 },
 			attributes: { description: data.description },
-			popupTemplate: { title: '{description}' },
+			popupTemplate: { title: '{description}.' },
 			geometry: { type: 'polyline', paths: data.paths },
 		});
 	};
@@ -136,11 +61,11 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 			geometry: { type: "point", ...data },
 			attributes: data,
 			popupTemplate: {
-				title: "{title}",
+				title: "{title}.",
 			},
 		});
 	};
-	// tỉnh
+	// Province
 	graphicsLayer.add(withProvince(ca_mau));
 	graphicsLayer.add(withProvince(bac_lieu));
 	graphicsLayer.add(withProvince(kien_giang));
@@ -188,7 +113,8 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withCity(ca_mau_city));
 	graphicsLayer.add(withCity(thu_duc_city));
 	graphicsLayer.add(withCity(baria_vungtau_city));
-	// trường đại học
+
+	// Universities
 	graphicsLayer.add(withUniversity(uit));
 	graphicsLayer.add(withUniversity(ftu));
 	graphicsLayer.add(withUniversity(ba_ria_vung_tau_university));
@@ -211,12 +137,9 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(nguyen_hue_university));
 	graphicsLayer.add(withUniversity(lam_nghiep_cs2_university));
 	graphicsLayer.add(withUniversity(dong_thap_university));
-	//graphicsLayer.add(withUniversity(hcmut));
 	graphicsLayer.add(withUniversity(an_giang_university));
 	graphicsLayer.add(withUniversity(can_tho_university));
 	graphicsLayer.add(withUniversity(tra_vinh_university));
-	//graphicsLayer.add(withUniversity(utc));
-	// trường đại học cần thơ
 	graphicsLayer.add(withUniversity(tay_do_university));
 	graphicsLayer.add(withUniversity(truong_dai_hoc_nam_can_tho));
 	graphicsLayer.add(withUniversity(dai_hoc_y_duoc_can_tho));
@@ -227,7 +150,6 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(xay_dung_mien_tay_uniersity));
 	graphicsLayer.add(withUniversity(su_pham_ki_thuat_vinh_long_uniersity));
 	graphicsLayer.add(withUniversity(vo_truong_toan_uniersity));
-	//trường đại học TPHCM
 	graphicsLayer.add(withUniversity(nguyentatthanh));
 	graphicsLayer.add(withUniversity(tonducthang));
 	graphicsLayer.add(withUniversity(mo));
@@ -281,30 +203,21 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withUniversity(hungvuong));
 	graphicsLayer.add(withUniversity(greenwich));
 	graphicsLayer.add(withUniversity(vanhien));
-	//trường đại học cà mau
 	graphicsLayer.add(withUniversity(binh_duong_ca_mau_uniersity));
 	graphicsLayer.add(withUniversity(ton_duc_thang_ca_mau_uniersity));
-	// đường
+
+	// ways
 	graphicsLayer.add(withWay(ql61));
 	graphicsLayer.add(withWay(quan_lo_phung_hiep));
 	graphicsLayer.add(withWay(ql56));
 	graphicsLayer.add(withWay(tl328));
-	// graphicsLayer.add(withWay(ah1));
 	graphicsLayer.add(withWay(tl748));
 	graphicsLayer.add(withWay(ql53));
 	graphicsLayer.add(withWay(ql30));
 	graphicsLayer.add(withWay(ql54));
-	// graphicsLayer.add(withWay(ql80_dong_thap));
-	graphicsLayer.add(withWay(qlN2_dong_thap_long_an));
-	// graphicsLayer.add(withWay(ql1A_long_an_d1));
+	graphicsLayer.add(withWay(qlN2));
 	graphicsLayer.add(withWay(ql1A_1));
-	// graphicsLayer.add(withWay(ql50_long_an));
 	graphicsLayer.add(withWay(ql62));
-	// graphicsLayer.add(withWay(qlN1_long_an));
-	// graphicsLayer.add(withWay(ql50_tien_giang));
-	// graphicsLayer.add(withWay(ql30_tien_giang));
-	// graphicsLayer.add(withWay(ql60_tien_giang));
-	// graphicsLayer.add(withWay(ql1A_tien_giang));
 	graphicsLayer.add(withWay(ql60));
 	graphicsLayer.add(withWay(ql61b));
 	graphicsLayer.add(withWay(ql13));
@@ -317,29 +230,16 @@ require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/Graphic', 'esri/
 	graphicsLayer.add(withWay(ql1A));
 	graphicsLayer.add(withWay(ql57));
 	graphicsLayer.add(withWay(dt986b));
-	// graphicsLayer.add(withWay(ql61c_hau_giang));
-	// graphicsLayer.add(withWay(ql1A_hau_giang));
-	// graphicsLayer.add(withWay(ql1A_hau_giang_soc_trang));
 	graphicsLayer.add(withWay(ql91b));
 	graphicsLayer.add(withWay(ql63));
-	// graphicsLayer.add(withWay(ql1a_bac_lieu));
-	// graphicsLayer.add(withWay(ql91b_bac_lieu));
 	graphicsLayer.add(withWay(ql91));
 	graphicsLayer.add(withWay(ql80));
+	graphicsLayer.add(withWay(ql80_1));
 	graphicsLayer.add(withWay(qln1));
-	// graphicsLayer.add(withWay(ql1A_vinh_long));
-	// graphicsLayer.add(withWay(ql54_vinh_long_tra_vinh));
-	// graphicsLayer.add(withWay(ql80_vinh_long));
-	// graphicsLayer.add(withWay(ql57_vinh_long));
-	// graphicsLayer.add(withWay(ql1A_dong_nai));
 	graphicsLayer.add(withWay(ql20));
-	// graphicsLayer.add(withWay(ql51_dong_nai));
-	graphicsLayer.add(withWay(ql1k_binh_duong));
-	// graphicsLayer.add(withWay(ql1A_can_tho));
+	graphicsLayer.add(withWay(ql1K));
 	graphicsLayer.add(withWay(ql91c));
-	// graphicsLayer.add(withWay(ql91b_can_tho))
 	graphicsLayer.add(withWay(ql61b))
-
 
 	map.add(graphicsLayer);
 });

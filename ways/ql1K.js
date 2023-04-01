@@ -1,4 +1,4 @@
-const ql1k_binh_duong = {
+const ql1K = {
   description:
     "<a>Quốc Lộ 1k, <br/>Chiều dài 21 km,  <br/>Đi qua Thành phố Hồ Chí Minh - Bình Dương - Đồng Nai</a>",
   color: [128, 138, 131],
