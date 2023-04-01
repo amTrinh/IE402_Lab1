@@ -1,8 +1,8 @@
 const long_an = {
 	title: 'Tỉnh Long An',
 	population: '2.003.000',
-	area: '4.492 km²',
-	color: [203, 80, 43, 0.8],
+	area: '4.492',
+	color: [191, 80, 43, 0.8],
 	rings: [
 		[105.5007795, 10.9519799], // Cực trên giáp đồng tháp
 		[105.5008103, 10.9517716],

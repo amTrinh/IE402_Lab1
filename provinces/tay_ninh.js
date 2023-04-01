@@ -1,7 +1,7 @@
 const tay_ninh = {
 	title: 'Tỉnh Tây Ninh',
 	population: '1.190.852',
-	area: '4.041,4 km²',
+	area: '4.041,4',
 	color: [43, 204, 166, 0.8],
 	rings: [
 		[105.8091078, 11.5995257],

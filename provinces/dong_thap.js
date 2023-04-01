@@ -1,7 +1,7 @@
 const dong_thap = {
 	title: 'Tỉnh Đồng Tháp',
 	population: '1.600.000',
-	area: '3.384 km²',
+	area: '3.384',
 	color: [0, 191, 255, 0.8],
 	rings: [
 		[105.1888402, 10.9112901], // Cực trên giáp an giang

@@ -2,7 +2,6 @@ const ql60 = {
 	description: '<a>Quốc Lộ 60, <br/>Chiều dài 115km,  <br/>Đi qua Tiền Giang - Bến Tre - Trà Vinh - Sóc trăng</a>',
 	color: [128, 138, 131],
 	paths: [
-
 		//giap QL1A
 		//Tien Giang
 		[106.34066482031209, 10.38310192400213],

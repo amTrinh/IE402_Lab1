@@ -1,8 +1,8 @@
 const ho_chi_minh = {
 	title: 'Thành phố Hồ Chí Minh',
 	population: '8.993.000',
-	area: '2.061 km²',
-	color: [203, 146, 43, 0.8],
+	area: '2.061',
+	color: [203, 191, 43, 0.8],
 	rings: [
 		[106.3567159, 10.9916992],
 		[106.362004, 10.98478],
